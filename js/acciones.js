@@ -7,15 +7,16 @@ function buscarlibros ()
 		alert (msg);
 		var DatosJSON=JSON.parse(msg);
 		
-		If (DatosJSON.datos==1)
+		if (DatosJSON.datos==1)
 		{
+			alert ('datos');
 			$('#libros').empty();
 			for (var i=0; i <DatosJSON.libros.length; i++){
 			$('#libros').append('<div style="float:left;width:45%"> <p>Libro: '+DatosJSON.libros[i].Nombre_libro+' <br> Autor :'+DatosJSON.libros[i].Autor+' </p> </div> <div style="float:left;width:55%"> <img class="portada" src="http://192.168.1.188/practica12/fotos/'+DatosJSON.libros[i].Id+'.jpg">  </div> <div style="clear:both">  <hr> <hr> </div>');
 			}
 		}
 		
-		If (DatosJSON.datos==0)
+		if (DatosJSON.datos==0)
 		{
 			alert("No hay Libros que mostrar");
 		}
