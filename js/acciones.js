@@ -33,6 +33,7 @@ $(document).ready(function(e) {
  document.addEventListener("deviceready",function(){
   $('#todos').tap(function(){
     buscarlibros ();
+	alert ("fuera");
 	$.mobile.changePage('#page2');
   });
  }); //deviceready
